@@ -17,7 +17,11 @@ f = float(input("Ingrese la frecuencia de la señal: "))
 a = float(input("Ingrese la amplitud de la señal: "))
 x = float(input("Ingrese el valor de x: "))
 
-print("y")
+punto = Generador(f, a, x)
+
+print(punto) 
+
+## probada, si da un punto
 
 
 ## basicamente la funcion traduce una pareja de pixeles en una pareja de valores de la funcion y luego usa ppx para (segun el periodo) determinar si la ampltud va+
