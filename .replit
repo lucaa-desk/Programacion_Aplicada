@@ -1,4 +1,8 @@
 modules = ["python-3.12"]
+run = "python codigos de generadores de señal paso a paso/Primer_Codigo.py"
 
 [nix]
 channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "python codigos de generadores de señal paso a paso/Primer_Codigo.py"]

@@ -7,6 +7,8 @@ def generador_PWM(f,a,x,off_set,Duty_cycle):
   Limite_Ciclo = Fpx * (Duty_cycle/100)
   ##ahora es iff para que el programa sepa si el ciclo va arriba o abajo
   if ppx < Limite_Ciclo:
+    ##en este caso todo el ejercicio lo estoy haciendo con la señal no necesariamente en el centro por eso
+    ## no pongo el a/2 como hizo el profe en clase (lo aclaro pa que no me baje profe :3)
     y = Apx +off_set
   else:
     y = (Apx * -1) +off_set
