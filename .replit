@@ -1,8 +1,8 @@
 modules = ["python-3.12"]
-run = "python codigos_de_generadores_de_señal_paso_a_paso/Cuarto_Codigo_final.py"
+run = "python codigos_de_generadores_de_señal_paso_a_paso/Alternativa_sin_math.py"
 
 [nix]
 channel = "stable-24_05"
 
 [deployment]
-run = ["sh", "-c", "python codigos_de_generadores_de_señal_paso_a_paso/Cuarto_Codigo_final.py"]
+run = ["sh", "-c", "python codigos_de_generadores_de_señal_paso_a_paso/Alternativa_sin_math.py"]
