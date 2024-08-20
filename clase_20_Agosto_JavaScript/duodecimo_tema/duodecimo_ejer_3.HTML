@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let total = 0;
+        let contador = 5
+        let  supe = 0;
+        let inf = 0;
+
+        while (contador > 0){
+
+            let sueldo = parseInt(prompt("ingrese el sueldo"));
+            total = total + sueldo;
+
+            if (sueldo >= 100 && sueldo <= 300){
+                supe = supe+1;
+            }else{
+                inf = inf+1;
+            }
+
+            contador = contador -1;
+        }
+
+        document.write("el total de dinero en sueldo es = ");
+        document.write(total);
+        document.write(" hay ");
+        document.write(supe);
+        document.write(" que ganan entre 100 y 300, y ");
+        document.write(inf);
+        document.write(" que ganan mas de 300"); 
+    </script>
+</body>
+</html>

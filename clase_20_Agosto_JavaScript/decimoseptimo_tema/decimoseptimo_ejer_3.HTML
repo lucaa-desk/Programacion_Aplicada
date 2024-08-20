@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contar Dígitos</title>
+</head>
+<body>
+    <script>
+        function contarDigitos(numero) {
+            if (numero >= 1 && numero <= 99999) {
+                return numero.toString().length;
+            } else {
+                return "El número debe ser una variable entera positiva de hasta 5 dígitos.";
+            }
+        }
+
+        let numero = parseInt(prompt("Ingrese un número entero positivo de hasta 5 dígitos:"));
+        let cantidadDigitos = contarDigitos(numero);
+
+        document.write("La cantidad de dígitos del número es: " + cantidadDigitos);
+    </script>
+</body>
+</html>

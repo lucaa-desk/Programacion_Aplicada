@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //pedir y comparar
+        let num1 = parseInt(prompt("ingresa el primer numero"));
+        let num2 = parseInt(prompt("ingresa el segundo numero"));
+
+        if (num1 > num2){
+            let suma = num1 + num2;
+            let resta = num1 - num2;
+
+            document.write(" la suma de los numeros es = ")
+            document.write(suma);
+            document.write('<br>');
+            document.write("la resta de los numeros es = ");
+            document.write(resta);
+        }else{
+            let div = num1 / num2;
+            let multi = num1 * num2;
+
+            document.write(" la divicion de los numeros es = ")
+            document.write(div);
+            document.write('<br>');
+            document.write("la multiplicacion de los numeros es = ");
+            document.write(multi);
+        }
+    </script>
+</body>
+</html>

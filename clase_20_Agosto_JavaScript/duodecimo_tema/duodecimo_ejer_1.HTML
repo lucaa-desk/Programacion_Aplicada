@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let contador = 10;
+        let superior = 0;
+        let mediocre = 0;
+
+        while(contador>0){
+            let nota = parseInt(prompt("escriba la nota"));
+
+            if (nota >=7){
+                superior = parseInt(superior)+1;
+            }else{
+                mediocre = parseInt(mediocre)+1
+            }
+
+            contador = parseInt(contador)-1;  
+        }
+
+        document.write(superior);
+        document.write("<br>");
+        document.write(mediocre);
+
+    </script>
+</body>
+</html>

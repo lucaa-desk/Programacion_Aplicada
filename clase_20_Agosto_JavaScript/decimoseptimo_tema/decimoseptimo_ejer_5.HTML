@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma de 5 Valores</title>
+</head>
+<body>
+    <script>
+        function sumarCincoValores() {
+            let suma = 0;
+            for (let i = 1; i <= 5; i++) {
+                let valor = parseFloat(prompt("Ingrese el valor " + i + ":"));
+                suma += valor;
+            }
+            return suma;
+        }
+
+        let sumaTotal = sumarCincoValores();
+
+        document.write("La suma de los 5 valores ingresados es: " + sumaTotal);
+    </script>
+</body>
+</html>

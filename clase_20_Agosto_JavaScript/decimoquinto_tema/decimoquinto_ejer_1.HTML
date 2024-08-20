@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Rango de Enteros</title>
+</head>
+<body>
+    <script>
+        // Función que muestra los números desde el menor hasta el mayor
+        function mostrarNumeros(menor, mayor) {
+            for (let i = menor; i <= mayor; i++) {
+                document.write(i + " ");
+            }
+        }
+
+        // Solicitar la carga de dos números enteros
+        let menor = parseInt(prompt("Ingrese un número menor:"));
+        let mayor = parseInt(prompt("Ingrese un número mayor:"));
+
+        // Verificar que los números sean válidos
+        if (menor < mayor) {
+            mostrarNumeros(menor, mayor);
+        } else {
+            document.write("El primer número debe ser menor que el segundo.");
+        }
+    </script>
+</body>
+</html>
+

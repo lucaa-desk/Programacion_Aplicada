@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparar Listas</title>
+</head>
+<body>
+    <script>
+        let lista1 = [];
+        let lista2 = [];
+        let sumaLista1 = 0;
+        let sumaLista2 = 0;
+
+        let contador1 = 0;
+        while (contador1 < 3) {
+            let valor = parseInt(prompt("Ingrese un valor para la lista 1:"));
+            lista1.push(valor);
+            sumaLista1 += valor;
+            contador1++;
+        }
+
+        let contador2 = 0;
+        while (contador2 < 3) {
+            let valor = parseInt(prompt("Ingrese un valor para la lista 2:"));
+            lista2.push(valor);
+            sumaLista2 += valor;
+            contador2++;
+        }
+
+        if (sumaLista1 > sumaLista2) {
+            document.write("Lista 1 mayor");
+        } else if (sumaLista2 > sumaLista1) {
+            document.write("Lista 2 mayor");
+        } else {
+            document.write("Listas iguales");
+        }
+    </script>
+</body>
+</html>

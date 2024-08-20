@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nombre = prompt("digite el nombre del aspirante");
+        let total = parseInt(prompt("numero de preguntas total"));
+        let corr = parseInt(prompt("numero de preguntas correctas"));
+
+        let persent = corr / total ;
+
+        if ( persent >= 0.9){
+            document.write("nivel superior");
+        }else{
+            if ( persent >= 0.75){
+                document.write("Nivel medio");
+            }else{
+                if (persent >= 0.5){
+                    document.write("Nivel regular");
+                }else{
+                    document.write("fuera de nivel");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

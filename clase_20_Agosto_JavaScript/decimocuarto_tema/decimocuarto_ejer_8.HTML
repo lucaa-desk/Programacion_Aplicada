@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promedio de Edades por Turno</title>
+</head>
+<body>
+    <script>
+        // Variables para las sumas de edades y los promedios
+        let sumaManana = 0, sumaTarde = 0, sumaNoche = 0;
+        let promedioManana, promedioTarde, promedioNoche;
+
+        // Ingresar las edades de los estudiantes del turno mañana (5 estudiantes)
+        for (let i = 1; i <= 5; i++) {
+            let edad = parseInt(prompt("Ingrese la edad del estudiante " + i + " del turno mañana:"));
+            sumaManana += edad;
+        }
+        promedioManana = sumaManana / 5;
+
+        // Ingresar las edades de los estudiantes del turno tarde (6 estudiantes)
+        for (let i = 1; i <= 6; i++) {
+            let edad = parseInt(prompt("Ingrese la edad del estudiante " + i + " del turno tarde:"));
+            sumaTarde += edad;
+        }
+        promedioTarde = sumaTarde / 6;
+
+        // Ingresar las edades de los estudiantes del turno noche (11 estudiantes)
+        for (let i = 1; i <= 11; i++) {
+            let edad = parseInt(prompt("Ingrese la edad del estudiante " + i + " del turno noche:"));
+            sumaNoche += edad;
+        }
+        promedioNoche = sumaNoche / 11;
+
+        // Imprimir los promedios
+        document.write("Promedio de edades del turno mañana: " + promedioManana + "<br>");
+        document.write("Promedio de edades del turno tarde: " + promedioTarde + "<br>");
+        document.write("Promedio de edades del turno noche: " + promedioNoche + "<br><br>");
+
+        // Determinar cuál es el turno con el mayor promedio de edades
+        if (promedioManana > promedioTarde && promedioManana > promedioNoche) {
+            document.write("El turno con el mayor promedio de edades es el turno mañana.");
+        } else if (promedioTarde > promedioManana && promedioTarde > promedioNoche) {
+            document.write("El turno con el mayor promedio de edades es el turno tarde.");
+        } else if (promedioNoche > promedioManana && promedioNoche > promedioTarde) {
+            document.write("El turno con el mayor promedio de edades es el turno noche.");
+        } else {
+            document.write("Hay un empate entre los turnos con el mayor promedio de edades.");
+        }
+    </script>
+</body>
+</html>

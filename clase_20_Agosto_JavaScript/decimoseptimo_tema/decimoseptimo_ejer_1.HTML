@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontrar el Mayor de Tres Números</title>
+</head>
+<body>
+    <script>
+        function obtenerMayor(num1, num2, num3) {
+            let mayor = num1;
+
+            if (num2 > mayor) {
+                mayor = num2;
+            }
+            if (num3 > mayor) {
+                mayor = num3;
+            }
+
+            return mayor;
+        }
+
+        let numero1 = parseInt(prompt("Ingrese el primer número entero:"));
+        let numero2 = parseInt(prompt("Ingrese el segundo número entero:"));
+        let numero3 = parseInt(prompt("Ingrese el tercer número entero:"));
+
+        let mayorNumero = obtenerMayor(numero1, numero2, numero3);
+
+        document.write("El mayor de los tres números es: " + mayorNumero);
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let años = parseInt(prompt("años de antiguedad"));
+        let sueldo = parseInt(prompt("sueldo actual"));
+
+        if ( sueldo < 500 && años >= 10){
+            let aumento1 = sueldo * 0.2;
+            sueldo = sueldo + aumento1;
+            document.write("el sueldo actual es de = ");
+            document.write(sueldo);
+        }else{
+            if ( sueldo < 500 && años < 10){
+                let aumento2 = sueldo*0.05;
+                sueldo = sueldo+aumento2
+                document.write("el sueldo actual es de = ");
+                document.write(sueldo);
+            }else{
+                document.write("no hay cambios");
+            }
+        }
+    </script>
+</body>
+</html>

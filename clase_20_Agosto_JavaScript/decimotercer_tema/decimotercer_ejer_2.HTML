@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procesamiento de Cuentas Bancarias</title>
+</head>
+<body>
+    <script>
+        let totalAcreedores = 0;
+        let numeroCuenta;
+
+        do {
+            numeroCuenta = parseInt(prompt("Ingrese el número de cuenta (ingrese un valor negativo para finalizar):"));
+
+            if (numeroCuenta >= 0) {
+                let nombreCliente = prompt("Ingrese el nombre del cliente:");
+                let saldoActual = parseFloat(prompt("Ingrese el saldo actual:"));
+
+                document.write("Número de cuenta: " + numeroCuenta + "<br>");
+                document.write("Nombre del cliente: " + nombreCliente + "<br>");
+                document.write("Saldo actual: " + saldoActual + "<br>");
+
+                if (saldoActual > 0) {
+                    document.write("Estado de la cuenta: Acreedor<br><br>");
+                    totalAcreedores += saldoActual;
+                } else if (saldoActual < 0) {
+                    document.write("Estado de la cuenta: Deudor<br><br>");
+                } else {
+                    document.write("Estado de la cuenta: Nulo<br><br>");
+                }
+            }
+        } while (numeroCuenta >= 0);
+
+        document.write("Suma total de los saldos acreedores: " + totalAcreedores);
+    </script>
+</body>
+</html>

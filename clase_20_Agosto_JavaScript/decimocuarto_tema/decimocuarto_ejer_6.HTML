@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Puntos en Cuadrantes</title>
+</head>
+<body>
+    <script>
+        let primerCuadrante = 0;
+        let segundoCuadrante = 0;
+        let tercerCuadrante = 0;
+        let cuartoCuadrante = 0;
+
+        let cantidadPuntos = parseInt(prompt("Ingrese la cantidad de puntos a procesar:"));
+
+        for (let i = 1; i <= cantidadPuntos; i++) {
+            let x = parseFloat(prompt("Ingrese la coordenada X del punto " + i + ":"));
+            let y = parseFloat(prompt("Ingrese la coordenada Y del punto " + i + ":"));
+
+            if (x > 0 && y > 0) {
+                primerCuadrante++;
+            } else if (x < 0 && y > 0) {
+                segundoCuadrante++;
+            } else if (x < 0 && y < 0) {
+                tercerCuadrante++;
+            } else if (x > 0 && y < 0) {
+                cuartoCuadrante++;
+            }
+        }
+
+        document.write("Puntos en el primer cuadrante: " + primerCuadrante + "<br>");
+        document.write("Puntos en el segundo cuadrante: " + segundoCuadrante + "<br>");
+        document.write("Puntos en el tercer cuadrante: " + tercerCuadrante + "<br>");
+        document.write("Puntos en el cuarto cuadrante: " + cuartoCuadrante + "<br>");
+    </script>
+</body>
+</html>

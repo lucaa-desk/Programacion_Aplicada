@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = parseInt(prompt("numero de x"));
+        let y = parseInt(prompt("numero de y"));
+
+        if (x>0 && y>0){
+            document.write("primer cuadrante");
+        }else{
+            if (x>0 && y<0){
+                document.write("cuarto cuadrante");
+            }else{
+                if (x<0 && y<0){
+                    document.write("tercer cuadrante");
+                }else{
+                    if (x<0 && y>0){
+                        document.write("segundo cuadrante");
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

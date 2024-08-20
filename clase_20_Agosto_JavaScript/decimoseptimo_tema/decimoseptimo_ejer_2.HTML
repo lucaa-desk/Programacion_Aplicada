@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular el Perímetro de un Cuadrado</title>
+</head>
+<body>
+    <script>
+        function calcularPerimetro(lado) {
+            return lado * 4;
+        }
+
+        let ladoCuadrado = parseFloat(prompt("Ingrese el valor del lado del cuadrado:"));
+        let perimetro = calcularPerimetro(ladoCuadrado);
+
+        document.write("El perímetro del cuadrado es: " + perimetro);
+    </script>
+</body>
+</html>

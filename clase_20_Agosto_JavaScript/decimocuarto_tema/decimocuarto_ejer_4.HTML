@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Triángulos</title>
+</head>
+<body>
+    <script>
+        let equilateros = 0;
+        let isosceles = 0;
+        let escalenos = 0;
+
+        for (let i = 1; i <= 4; i++) {
+            let lado1 = parseFloat(prompt("Ingrese el primer lado del triángulo " + i + ":"));
+            let lado2 = parseFloat(prompt("Ingrese el segundo lado del triángulo " + i + ":"));
+            let lado3 = parseFloat(prompt("Ingrese el tercer lado del triángulo " + i + ":"));
+
+            if (lado1 === lado2 && lado2 === lado3) {
+                document.write("Triángulo " + i + " es Equilátero<br>");
+                equilateros++;
+            } else if (lado1 === lado2 || lado1 === lado3 || lado2 === lado3) {
+                document.write("Triángulo " + i + " es Isósceles<br>");
+                isosceles++;
+            } else {
+                document.write("Triángulo " + i + " es Escaleno<br>");
+                escalenos++;
+            }
+        }
+
+        document.write("<br>Cantidad de triángulos equiláteros: " + equilateros + "<br>");
+        document.write("Cantidad de triángulos isósceles: " + isosceles + "<br>");
+        document.write("Cantidad de triángulos escalenos: " + escalenos + "<br>");
+
+        let menorCantidad = Math.min(equilateros, isosceles, escalenos);
+
+        if (menorCantidad === equilateros) {
+            document.write("<br>El tipo de triángulo con menor cantidad es: Equilátero");
+        } else if (menorCantidad === isosceles) {
+            document.write("<br>El tipo de triángulo con menor cantidad es: Isósceles");
+        } else {
+            document.write("<br>El tipo de triángulo con menor cantidad es: Escaleno");
+        }
+    </script>
+</body>
+</html>

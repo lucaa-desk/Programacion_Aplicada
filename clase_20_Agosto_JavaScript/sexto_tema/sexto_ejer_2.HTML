@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //pedir notas
+        let nota1 = parent(prompt("digita la nota 1"));
+        let nota2 = parent(prompt("digita la nota 2"));
+        let nota3 = parent(prompt("digita la nota 3"));
+
+        let total = nota1 + nota2 + nota3;
+        let prom = parseInt(total)/3;
+
+        if (prom >= 4){
+            document.write("regular");
+        }else{
+            document.write("reprobado");
+        }
+    </script>
+</body>
+</html>

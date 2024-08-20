@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acumulador de Valores</title>
+</head>
+<body>
+    <script>
+        let acumulador = 0;
+        let valor;
+
+        do {
+            valor = parseInt(prompt("Ingrese un valor (9999 para finalizar):"));
+            if (valor !== 9999) {
+                acumulador += valor;
+            }
+        } while (valor !== 9999);
+
+        document.write("Valor acumulado: " + acumulador + "<br>");
+
+        if (acumulador > 0) {
+            document.write("El valor acumulado es mayor a cero.");
+        } else if (acumulador < 0) {
+            document.write("El valor acumulado es menor a cero.");
+        } else {
+            document.write("El valor acumulado es cero.");
+        }
+    </script>
+</body>
+</html>

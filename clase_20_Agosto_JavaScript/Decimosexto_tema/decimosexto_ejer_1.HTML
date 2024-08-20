@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontrar el Menor de Tres Números</title>
+</head>
+<body>
+    <script>
+        function mostrarMenor(num1, num2, num3) {
+            let menor;
+
+            if (num1 < num2 && num1 < num3) {
+                menor = num1;
+            } else if (num2 < num1 && num2 < num3) {
+                menor = num2;
+            } else {
+                menor = num3;
+            }
+
+            document.write("El menor de los tres números es: " + menor);
+        }
+
+        let numero1 = parseInt(prompt("Ingrese el primer número entero:"));
+        let numero2 = parseInt(prompt("Ingrese el segundo número entero:"));
+        let numero3 = parseInt(prompt("Ingrese el tercer número entero:"));
+
+        mostrarMenor(numero1, numero2, numero3);
+    </script>
+</body>
+</html>

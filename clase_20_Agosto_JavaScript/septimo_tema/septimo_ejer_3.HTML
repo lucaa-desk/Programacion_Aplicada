@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //mirar si es de 3 2 o 1 cifra
+        let num = parseInt(prompt("ingresa el numero"));
+
+        let ver3 = num/100;
+        let ver2 = num/10;
+
+        if (ver3 >= 1){
+            document.write("el numero es de 3 cifras");
+        }else{
+            if (ver2 >= 1){
+                document.write("el numero es de dos cifras");
+            }else{
+                document.write("el numero es de una cifra");
+            }
+        }
+    </script>
+</body>
+</html>
