@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brazo Robótico en Three.js</title>
+  <style>
+    body { margin: 0; overflow: hidden; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+  <script src="https://threejs.org/build/three.js"></script>
+  <script>
+    // Crear la escena, la cámara y el renderizador
+    const scene = new THREE.Scene();
+    
+    // Añadir un fondo de color a la escena para que sea más visible
+    scene.background = new THREE.Color(0xeeeeee);
+
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    // Material para las partes del brazo robótico
+    const material = new THREE.MeshBasicMaterial({ color: 0x8B4513 });
+
+    // Base del brazo robótico
+    const baseGeometry = new THREE.BoxGeometry(5, 0.5, 5);
+    const base = new THREE.Mesh(baseGeometry, material);
+    scene.add(base);
+
+    // Primer segmento del brazo
+    const arm1Geometry = new THREE.BoxGeometry(0.5, 3, 0.5);
+    const arm1 = new THREE.Mesh(arm1Geometry, material);
+    arm1.position.set(0, 1.75, 0); // Ajustar posición sobre la base
+    base.add(arm1);
+
+    // Segundo segmento del brazo
+    const arm2Geometry = new THREE.BoxGeometry(0.5, 3, 0.5);
+    const arm2 = new THREE.Mesh(arm2Geometry, material);
+    arm2.position.set(0, 3, 0); // Ajustar posición sobre el primer segmento
+    arm1.add(arm2);
+
+    // Luz ambiental para iluminar el escenario
+    const light = new THREE.AmbientLight(0xffffff);
+    scene.add(light);
+
+    // Posicionar la cámara de manera que tenga una vista adecuada del brazo
+    camera.position.z = 10;
+    camera.position.y = 5;  // Ajusta la altura de la cámara para ver el brazo desde arriba
+
+    // Función de animación para mover el brazo robótico
+    function animate() {
+      requestAnimationFrame(animate);
+      
+      // Simular rotación del primer y segundo segmento del brazo
+      arm1.rotation.z = Math.sin(Date.now() * 0.001) * Math.PI / 4; // Rotación suave del primer segmento
+      arm2.rotation.z = Math.sin(Date.now() * 0.001) * Math.PI / 6; // Rotación suave del segundo segmento
+
+      // Renderizar la escena
+      renderer.render(scene, camera);
+    }
+
+    // Llamar a la función de animación
+    animate();
+
+    // Ajustar el tamaño del renderizador cuando la ventana cambia de tamaño
+    window.addEventListener('resize', () => {
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+    });
+  </script>
+</body>
+</html>
