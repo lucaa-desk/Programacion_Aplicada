@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Control de Servos</title>
+</head>
+<body>
+    <h1>Control de Servos</h1>
+    <p>Servo 1:</p>
+    <input type="range" id="slider1" min="0" max="100" value="50" step="1" oninput="updateServos()">
+    
+    <p>Servo 2:</p>
+    <input type="range" id="slider2" min="0" max="100" value="50" step="1" oninput="updateServos()">
+    
+    <script>
+        function updateServos() {
+            let value1 = document.getElementById('slider1').value;
+            let value2 = document.getElementById('slider2').value;
+            fetch(`/update_servos?value1=${value1}&value2=${value2}`)
+                .then(response => response.text())
+                .then(data => console.log(data))
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
