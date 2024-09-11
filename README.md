@@ -1,2 +1,1 @@
-Estudiante: Luver Lopez
-Codigo: 20231005155
+Estudiante: Luver Lopez | Codigo: 20231005155
